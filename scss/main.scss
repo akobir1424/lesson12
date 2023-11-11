@@ -1,0 +1,122 @@
+body {
+  --text-color: #07253b;
+  --bg-color: #fff;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --text-color: #fff;
+  --bg-color: #07253b;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  .header {
+    width: 100%;
+    height: 90px;
+    &__nav {
+      position: fixed;
+      top: 0;
+      background-color: var(--bg-color);
+      box-shadow: 1px 2px 5px #00000090;
+      width: 100%;
+      &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        max-width: 1020px;
+        margin: 0px auto;
+      }
+    }
+  }
+
+  .single-cont {
+    max-width: 1020px;
+    background-color: var(--bg-color);
+    padding: 30px;
+    margin: 20px auto;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    gap: 40px;
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+  .back {
+    margin-bottom: 40px;
+  }
+  .single {
+    opacity: 0;
+    max-width: 1020px;
+    visibility: hidden;
+    margin: 0px auto;
+  }
+  .single.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .single.active .single-cont {
+    opacity: 1;
+    visibility: visible;
+  }
+  .countries {
+    max-width: 1240px;
+    margin: 20px auto;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: var(--bg-color);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+  .countries.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+  .country-div {
+    background: var(--bg-color);
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+  .row {
+    max-width: 1020px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--bg-color);
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .row.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+  .input,
+  .select {
+    padding: 10px;
+    border: none;
+    box-shadow: 1px 1px 10px #555;
+    border-radius: 5px;
+  }
+  img {
+    width: 100%;
+    height: 150px;
+  }
+}
